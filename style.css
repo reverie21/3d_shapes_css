@@ -1,5 +1,6 @@
 :root {
     --boxColor: #0ff7;
+    --rotateSpeed: 30s;
 }
 
 body {
@@ -14,9 +15,18 @@ body {
     perspective-origin: 50% calc(50% - 2em);
 }
 
+
 .scene {
     position: relative;
     transform-style: preserve-3d;
+    animation: rotateScene var(--rotateSpeed) infinite linear;
+}
+
+@keyframes rotateScene {
+    to {
+        transform: rotateY(360deg);
+    }
+
 }
 
 .ball {
@@ -32,6 +42,7 @@ body {
     transform-style: inherit;
 
     background-image: radial-gradient(circle at top, lightblue, #000);
+    animation: rotateScene var(--rotateSpeed) infinite linear reverse;
 }
 
 .ball_shadow {
@@ -49,7 +60,6 @@ body {
 
     width: 2em;
     height: 2em;
-
 
     transform-style: inherit;
 
