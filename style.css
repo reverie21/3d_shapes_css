@@ -1,6 +1,7 @@
 :root {
     --boxColor: #0ff7;
     --rotateSpeed: 30s;
+    --bounceSpeed: 1.5s;
 }
 
 body {
@@ -26,7 +27,34 @@ body {
     to {
         transform: rotateY(360deg);
     }
+}
 
+@keyframes ballBounce {
+
+    0%,
+    100% {
+        bottom: 1em;
+    }
+
+    50% {
+        bottom: 3em;
+        animation-timing-function: ease-in;
+    }
+}
+
+@keyframes ballBounceShadow {
+
+    0%,
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+
+    50% {
+        transform: scale(1.5);
+        opacity: 0.5;
+        animation-timing-function: ease-in;
+    }
 }
 
 .ball {
@@ -42,7 +70,9 @@ body {
     transform-style: inherit;
 
     background-image: radial-gradient(circle at top, lightblue, #000);
-    animation: rotateScene var(--rotateSpeed) infinite linear reverse;
+    animation:
+        rotateScene var(--rotateSpeed) infinite linear reverse,
+        ballBounce var(--bounceSpeed) infinite ease-out;
 }
 
 .ball_shadow {
@@ -51,6 +81,7 @@ body {
     height: 100%;
     /* background-color: #fff; */
     background-image: radial-gradient(#0007, #0000 50%);
+    animation: ballBounceShadow var(--bounceSpeed) infinite ease-out;
 }
 
 .cube {
