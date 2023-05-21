@@ -1,0 +1,91 @@
+<div class="c c1">
+    <div class="s a"></div>
+    <div class="s a"></div>
+    <div class="s a"></div>
+</div>
+<div class="c c2">
+    <div class="s b"></div>
+    <div class="s b"></div>
+    <div class="s b"></div>
+</div>
+</div>
+<style>
+    body {
+        background: #6592CF;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .c {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-top: 52px;
+        margin-left: -90px;
+    }
+
+    .c2 {
+        margin-top: -150px;
+        margin-left: 90px;
+    }
+
+    .s {
+        height: 23px;
+        width: 130px;
+        background: #293D7E;
+        margin-top: 27px;
+    }
+
+    .a {
+        transform: rotate(38deg);
+    }
+
+    .b {
+        transform: rotate(-38deg);
+    }
+
+    .a::before,
+    .b::before,
+    .a::after,
+    .b::after {
+        position: absolute;
+        content: "";
+        display: block;
+        background: inherit;
+        height: 30px;
+    }
+
+    .a::before,
+    .b::before {
+        width: 40px;
+        margin-top: 12px;
+    }
+
+    .a::before {
+        transform: rotate(53deg);
+        margin-left: -20px;
+    }
+
+    .b::before {
+        transform: rotate(-53deg);
+        margin-left: 110px;
+    }
+
+    .a::after,
+    .b::after {
+        width: 1200px;
+        background: #6592CF;
+        margin-top: 23px;
+    }
+
+    .a::after {
+        margin-left: -25px;
+    }
+
+    .b::after {
+        margin-left: 95px;
+    }
+</style>
