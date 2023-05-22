@@ -341,3 +341,48 @@ h1 {
     outline-offset: 1px;
     transition: outline-offset 50ms ease, opacity 50ms ease;
 }
+
+.logo {
+    margin: 0;
+}
+
+.logo p {
+    margin-top: -55px;
+    color: var(--clr-neutral-400);
+    font-weight: 300;
+}
+
+.hill {
+    border: 5em solid transparent;
+    border-bottom-color: var(--clr-primary-400);
+    transform: scale(0.5) translateY(-50px);
+    /* transform: translateY(-46px) scaleX(0.96) translateX(-0px) scale(0.3); */
+    position: relative;
+}
+
+.full-moon {
+    width: var(--font-size-700);
+    height: var(--font-size-700);
+    background: var(--clr-primary-400);
+    border-radius: 50%;
+    position: absolute;
+    inset: 0;
+    margin-left: -1.5em;
+    margin-top: -1.5em;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.moon-shadow {
+    width: var(--font-size-700);
+    aspect-ratio: 1;
+    background: var(--clr-neutral-100);
+    margin-left: .1em;
+    margin-top: 2.1em;
+    transform: rotate(45deg);
+}
+
+.text-subdued {
+    font-weight: 300;
+    color: var(--clr-neutral-400);
+}
