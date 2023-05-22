@@ -299,6 +299,18 @@ h1 {
     top: 4.5px;
 }
 
+[data-big-nav-open] .menu-toggle {
+    position: relative;
+    width: 5%;
+    aspect-ratio: 1;
+    border-radius: 50%;
+}
+
+[data-big-nav-open] .menu-toggle:hover {
+    cursor: pointer;
+    background: var(--clr-neutral-400);
+}
+
 .send-request {
     background: var(--clr-neutral-100);
     color: var(--clr-primary-400);
