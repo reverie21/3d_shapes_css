@@ -25,7 +25,7 @@
                 </div>
                 <p>SLOPES</p>
             </div>
-            <p class="text-subdued">copyright 2022</p>
+            <p class="text-subdued">&#169; 2022</p>
         </div>
         <div class="stack">
             <header class="flex-row justify-content-space-between">
@@ -79,10 +79,21 @@
                     </ul>
                 </div>
             </div>
-            <div class="content-grid align-content-center">
+            <div class="content-grid align-content-center expandable">
                 <main class="grid-70-30">
                     <div>
                         <h1>Get fit to hit <br> the slopes &mdash;<br> winter in Sweden</h1>
+                        <div class="expand-for-more fa-solid fa-chevron-down">
+                            <a href="#">
+                                <div></div>
+                            </a>
+                        </div>
+                        <div id="more-details" class="details to-expand">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit illo ad eius
+                                adipisci
+                                placeat, omnis commodi unde nisi incidunt, necessitatibus praesentium fugit minima quia,
+                                reiciendis beatae vitae itaque pariatur amet.</p>
+                        </div>
                     </div>
                     <div>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam quam culpa recusandae alias
@@ -92,11 +103,12 @@
                         <a class="button send-request" href="#">Send request</a>
                     </div>
                 </main>
+
             </div>
             <footer>
                 <ul class="footer-list">
-                    <li>Social links.</li>
-                    <li><a href="https://www.youtube.com/watch?v=fpRqQkApeFk">Tutorial</a></li>
+                    <li>Social links</li>
+                    <li><a href="https://www.youtube.com/watch?v=fpRqQkApeFk">YouTube Tutorial</a></li>
                     <li><a href="https://dribbble.com/shots/2980874-Slopes-Website/attachments/2980874?mode=media">Original
                             Dribble</a>
                     </li>
@@ -125,6 +137,16 @@
             menuToggle.classList.toggle("hamburger");
             menuToggle.classList.toggle("fa-xmark");
             menuToggle.classList.toggle("fa-solid");
+        })
+
+        const expandToggle = document.querySelector(".expand-for-more");
+        const details = document.querySelector(".details");
+        expandToggle.addEventListener("click", () => {
+            expandToggle.classList.toggle("click-to-expand");
+            expandToggle.classList.toggle("fa-chevron-up");
+            expandToggle.classList.toggle("fa-chevron-down");
+            details.classList.toggle("expanded");
+            details.classList.toggle("to-expand");
         })
     </script>
 </body>
